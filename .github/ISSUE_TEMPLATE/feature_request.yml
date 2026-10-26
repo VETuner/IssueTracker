@@ -1,0 +1,62 @@
+name: Feature request
+description: Suggest something VETuner should do, or do differently.
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Feature requests are welcome. The most useful ones describe the **problem**
+        rather than a specific implementation — it usually leads somewhere better.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: What are you doing when this gets in your way?
+      placeholder: |
+        I tune on a tablet at the car, and I have to keep walking back to the laptop
+        to check something.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to happen?
+      description: Your idea, if you have one. "I don't know, but it should be easier" is a valid answer.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What do you do instead today?
+      description: Workarounds help us understand how much the gap costs you.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of VETuner?
+      options:
+        - Tuning tables (VE, ignition, AFR)
+        - VE Analyse / log analysis
+        - Gauges and dashboards
+        - Logging
+        - Connection / communication
+        - ECU definitions (INI files)
+        - Settings and appearance
+        - Something else
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+
+        Note that some features are part of the paid tier and others are not — we may
+        suggest a different scope than you asked for. That is a discussion, not a
+        rejection.
