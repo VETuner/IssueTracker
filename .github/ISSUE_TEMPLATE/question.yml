@@ -1,0 +1,44 @@
+name: Question or help
+description: Ask how to do something, or get help with your setup.
+title: "[Question]: "
+labels: ["question", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Stuck on a setup step, or not sure whether something is a bug? Ask here.
+
+        If the app is clearly misbehaving, the **Bug report** form will get you a
+        faster answer.
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: What are you trying to do?
+      placeholder: I want to load my Speeduino tune and check the VE table against a datalog.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you tried?
+      description: Include exact error messages if you saw any.
+    validations:
+      required: false
+
+  - type: input
+    id: ecu
+    attributes:
+      label: ECU and firmware
+      placeholder: Speeduino 202501
+    validations:
+      required: false
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device
+      placeholder: Chrome 156 on Windows 11
+    validations:
+      required: false

@@ -1,0 +1,114 @@
+name: Bug report
+description: Something in VETuner is broken or behaving unexpectedly.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this.
+
+        **Before you start:** if you can, use **Report Bug** inside VETuner instead. It
+        automatically attaches your ECU signature, INI, diagnostics, console log and a
+        screenshot — far more than you can paste here — and it reaches us privately.
+
+        Use this form when you want a public conversation, need to attach files
+        yourself, or the app would not start at all.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe what went wrong. Specific beats general.
+      placeholder: I connected to my Speeduino, opened the VE table, and every cell showed 0.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      placeholder: The VE table should show the values from my tune.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: If you can make it happen again, list the steps.
+      placeholder: |
+        1. Load INI …
+        2. Connect via USB
+        3. Open Tools → VE Table
+        4. …
+    validations:
+      required: false
+
+  - type: dropdown
+    id: connection
+    attributes:
+      label: How are you connecting?
+      description: Connection problems are the most common class of bug, and the method matters a lot.
+      options:
+        - USB cable (WebSerial) — desktop
+        - USB cable (WebUSB) — Android
+        - Bluetooth
+        - Simulator / offline
+        - Not connected
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: ecu
+    attributes:
+      label: ECU and firmware signature
+      description: |
+        Shown in the app under Connection, or the first line of your INI file.
+        For example `speeduino 202501` or `MS3 Format 0601.16`.
+      placeholder: speeduino 202501
+    validations:
+      required: false
+
+  - type: input
+    id: build
+    attributes:
+      label: VETuner build
+      description: Shown in the app footer or under Settings, as a short commit hash like `b8490690`.
+      placeholder: b8490690
+    validations:
+      required: false
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and operating system
+      description: For example "Chrome 156 on Android 10" or "Firefox 158 on Windows 11".
+      placeholder: Chrome 156 / Android 10
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs, screenshots or files
+      description: |
+        Drag files here, or paste console output. Screenshots of the whole window are
+        much more useful than crops.
+
+        **Please do not paste your full MSQ or INI if it contains anything personal** —
+        attach it as a file instead, and strip anything you would not want public.
+      render: text
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have searched existing issues and this is not a duplicate.
+          required: true
+        - label: This report contains no passwords, API keys or personal data.
+          required: true

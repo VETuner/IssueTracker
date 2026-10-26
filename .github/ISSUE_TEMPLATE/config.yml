@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a bug from inside the app
+    url: https://vetuner.co.uk/app
+    about: The in-app "Report Bug" button attaches your ECU signature, INI, diagnostics, console log and a screenshot automatically, and reaches us privately. It produces a far better report than a form can.
+  - name: Documentation
+    url: https://vetuner.co.uk/docs
+    about: Setup guides, supported ECUs and troubleshooting.
