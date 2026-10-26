@@ -2,8 +2,8 @@
 
 Public issue tracker for [vetuner.co.uk](https://vetuner.co.uk).
 
-This is an intake point. Issues needing engineering work are moved to the
-development tracker and closed here with a link.
+This is an intake point. Issues needing engineering work get logged in our
+internal tracker, and the issue here is closed once the fix ships.
 
 ## Rather use the app?
 
